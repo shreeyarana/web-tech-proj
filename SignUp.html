@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        </head>
+    <body>
+        <div id="root">
+        <script type="text/babel">
+            class Fn extends React.Component{
+                render(){
+                    var c={width:"320px",
+                        height:"25px",
+                        background: "black",
+                        color:"white",
+                        position: "absolute",
+                    }
+                    return(<div>
+                        <label>First Name:</label>
+                        <input type="text" style={c} placeholder="First name" required></input>
+                        </div>);
+                }
+            }
+            class Ln extends React.Component{
+                render(){
+                    var c={width:"320px",
+                        height:"25px",
+                        background: "black",
+                        color:"white",
+                        position: "absolute",
+                    }
+                    return(<div>
+                        <label>Last Name:</label>
+                        <input type="text" style={c} placeholder="Last name" required></input>
+                        </div>);
+                }
+            }
+            class Ph extends React.Component{
+                render(){
+                    var c={width:"320px",
+                        height:"25px",
+                        background: "black",
+                        color:"white",
+                        position: "absolute",
+                    }
+                    return(<div>
+                        <label>Phone Number:</label>
+                        <input type="tel" style={c} maxLength="10" required></input>
+                        </div>);
+                }
+            }
+            class Ma extends React.Component{
+                render(){
+                    var c={width:"320px",
+                        height:"25px",
+                        background: "black",
+                        color:"white",
+                        position: "absolute",
+                    }
+                    return(<div>
+                        <label>Email:</label>
+                        <input type="email" style={c} required></input>
+                        </div>);
+                }
+            }
+            class Da extends React.Component{
+                render(){
+                    var c={width:"320px",
+                        height:"25px",
+                        background: "black",
+                        color:"white",
+                        position: "absolute",
+                    }
+                    return(<div>
+                        <label>Date of birth:</label>
+                        <input type="date" style={c} required></input>
+                        </div>);
+                }
+            }
+            class Gem extends React.Component{
+                render(){
+                    var c={//width:"320px",
+                        height:"25px",
+                        background: "black",
+                        color:"white",
+                        position: "absolute",
+                    }
+                    return(<div>
+                        <label><input type="radio"  required></input>Male</label>
+                        </div>);
+                }
+            }
+            class Gef extends React.Component{
+                render(){
+                    var c={//width:"40px",
+                        // height:"25px",
+                        // background: "black",
+                        // color:"white",
+                        // position: "absolute",
+                    }
+                    return(<div>
+                        <label><input type="radio" style={c} required></input>Female</label>
+                        </div>);
+                }
+            }
+            class Geo extends React.Component{
+                render(){
+                    var c={//width:"40px",
+                        // height:"25px",
+                        // background: "black",
+                        // color:"white",
+                        // position: "absolute",
+                    }
+                    return(<div>
+                        <label><input type="radio" style={c} required></input>Others</label>
+                        </div>);
+                }
+            }
+            class Op extends React.Component{
+                render()
+                {
+                    return(<div>
+                        <select required>
+                            <option selected disabled>
+                                ---select---
+                                </option>
+                                <option>
+                                    What is your pet name?
+                                    </option>
+                                    <option>
+                                        What is favourite dish?
+                                        </option>
+                                        <option>
+                                        What is favourite colour?
+                                        </option> 
+                                        <option>
+                                        What is favourite brand?
+                                        </option>
+                                        <option>
+                                        What is your dream destination?
+                                        </option>
+                                    </select>           
+                        </div>);
+                    }
+                }
+                class Ans extends React.Component{
+                render(){
+                    var c={width:"320px",
+                        height:"25px",
+                        background: "black",
+                        color:"white",
+                        position: "absolute",
+                    }
+                    return(<div>
+                        <label>Answer:</label>
+                        <input type="text" style={c} placeholder="Answer" required></input>
+                        </div>);
+                }
+            }
+            ReactDOM.render(
+                <div>
+                    <h1>SIGN UP</h1>
+                    <Fn></Fn>
+                    <br></br>
+                    <Ln></Ln>
+                    <br></br>
+                    <Ph></Ph>
+                    <br></br>
+                    <Ma></Ma>
+                    <br></br>
+                    <Da></Da>
+                    <br></br>
+                    <label>Gender:</label>
+                    <Gem></Gem>
+                    <Gef></Gef>
+                    <Geo></Geo>
+                    <br></br>
+                    <label>Choose Security Question:</label>
+                    <Op></Op>
+                    <br></br>
+                    <Ans></Ans>
+                    </div>,document.querySelector("#root"))
+            </script>
+            </div>
+            </body>
+            </html>

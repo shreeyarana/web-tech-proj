@@ -1,0 +1,134 @@
+.loginPage {
+    margin: 0;
+    padding: 0;
+    background-image: url(bg2.png);
+    background-size:cover;
+    background-position: center;
+    font-size: large;
+}
+
+.loginbox{
+    width:320px;
+    height:420px;
+    background: #000;
+    color:#fff;
+    top:30%;
+    left:40%;
+    position: absolute;
+    border-radius: 5%;
+    box-sizing: border-box;
+    opacity: 95%;
+    padding: 70px 30px;
+}
+/*form{
+    display: :inline;
+}
+p{
+    display: inline;
+}*/
+
+h1 {
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+    font-family: sans-serif;
+}
+
+.loginbox p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+
+.loginbox input[type="text"],input[type="password"]
+{
+    border:none;
+    border-bottom: 1px solid #fff;
+    background:transparent;
+    outline:none;
+    height:30px;
+    width: 295px;
+    color:#fff;
+    font-size:16px;
+    margin-left: 10px;
+}
+
+
+.loginbox input[type="button"]
+{
+
+    padding: 15px 40px;
+    background: #000;
+    border:2px;
+    border-color:gainsboro;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: helvetica;
+    font-size: 15px;
+    letter-spacing: 3px;
+    position: relative;
+    transition:         all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    cursor: pointer;
+    display: inline;
+    width: 200px;  
+    margin-left: 58px;  
+}
+
+.loginbox input[type="button"]::after,
+.loginbox input[type="button"]::before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition:all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loginbox input[type="button"]::after
+{
+    width: 30px;
+    height: 1px;
+    background: white;
+    transform: translateX(-3px);
+    margin-top: 0px;
+}
+
+.loginbox input[type="button"]::before
+{
+    content: "";
+    transform: rotate(-135deg) translateX(50%);
+    width: 11px;
+    height: 11px;
+    background: transparent;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-top: -1px;
+}
+
+
+.loginbox input[type="button"]:hover
+{
+    background: #fff;
+    color: #000;
+}
+
+.loginbox input[type="button"]:hover::after,
+.loginbox input[type="button"]:hover::before
+{
+    opacity: 1;
+    right: 15px;
+}
+
+.loginbox a{
+    margin-left: 66px;
+    color:#fff;
+}
+
+.loginbox a:hover
+{
+    background:rgb(255, 255, 255);
+    color: #000;
+}

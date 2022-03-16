@@ -1,0 +1,103 @@
+.fullPage{
+    margin:0;
+    padding:0;
+    background-image: url(hotelhome.jpg);
+    background-size:cover;
+    background-position:top;
+    font-family: sans-serif;
+    min-height: 820px;
+}
+
+
+.nav-link{
+    font-size: 30px;
+    font-weight: bolder;
+    color: black;
+    background-color: rgb(47, 255, 47);
+    border: none;
+    border-radius: 5px;
+    margin-left: 8px;
+    
+}
+
+
+.navbar{
+    background-color: cadetblue;
+    margin: 0;
+    padding: 15px;
+}
+
+
+#b2 {
+    font-size: 25px;
+    background-color: rgb(47, 255, 47);
+    color:black;
+    width: 150px;
+    float: right;
+    font-weight: bold;
+  }
+
+.SectionLight{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.heading-subheading{
+    background-color:white;
+}
+
+.footerSection{
+    margin-top: 20px;
+}
+
+.carousel-item
+{
+    height: 50x;
+    width: 100x;
+}
+
+.social-wrapper{
+    padding:15px;
+}
+.social-wrapper a{
+    padding: 20px;
+    color:black;
+}
+
+.footer{
+    
+    background-color:cadetblue;
+    opacity: 0.7;
+}
+
+.footerSection{
+    margin-top: 10px;
+}
+
+
+.displayname{
+    padding-left: 80px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.info
+{
+    padding-top: 35px;
+    padding-left: 100px;
+}
+
+.contactinfo
+{
+    font-size: 30px;
+    color:black;
+    font-weight: bolder;
+}
+
+.number{
+    font-size: 20px;
+    color:black;
+    font-weight: bolder;
+    padding-left: 50px;
+}

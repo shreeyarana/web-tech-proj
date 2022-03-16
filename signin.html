@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			body {font-family: Arial, Helvetica, sans-serif;}
+			* {box-sizing: border-box}
+			
+			label{
+						cursor: pointer;
+						display: inline-block;
+						padding: 3px 7px;
+						width: 160px;
+						vertical-align: top;
+					}
+			
+			.required:after {
+				content:" *";
+				color: red;
+			  }
+			  
+			/* Full-width input fields */
+			input[type=text], input[type=password] {
+			  width: 50%;
+			  padding: 15px;
+			  margin: 5px 0 22px 0;
+			  display: inline-block;
+			  border: none;
+			  background: #f1f1f1;
+			}
+			
+			input[type=text]:focus, input[type=password]:focus {
+			  background-color: #ddd;
+			  outline: none;
+			}
+			
+			hr {
+			  border: 1px solid #f1f1f1;
+			  margin-bottom: 25px;
+			}
+			
+			/* Set a style for all buttons */
+			button {
+			  background-color: #04AA6D;
+			  color: white;
+			  padding: 14px 20px;
+			  margin: 8px 0;
+			  border: none;
+			  cursor: pointer;
+			  width: 50%;
+			  opacity: 0.9;
+			}
+			
+			button:hover {
+			  opacity:1;
+			}
+			
+
+            
+            
+			/* Extra styles for the cancel button */
+			.cancelbtn {
+			  padding: 14px 10px;
+			  background-color: #f44336;
+			}
+			
+			/* Float cancel and signup buttons and add an equal width */
+			.cancelbtn, .signupbtn {
+			  float: left;
+			  width: 25%;
+			}
+			
+			/* Add padding to container elements */
+			.container {
+              position: fixed;
+              top:70px;
+              left: 30%
+			  
+			}
+			
+			/* Clear floats */
+			.clearfix::after {
+			  content: "";
+			  clear: both;
+			  display: table;
+			}
+			
+			/* Change styles for cancel button and signup button on extra small screens */
+			@media screen and (max-width: 100px) {
+			  .cancelbtn, .signupbtn {
+				 width: 50%;
+			  }
+			}
+			</style>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sign Up</title>
+	</head>
+    <link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/lightslider.css"/>
+<link rel="stylesheet" href="css/lightslider-custom.css"/>
+<link rel="stylesheet" href="css/feature.css"/>
+<link rel="stylesheet" href="css/new-product.css"/>
+<link rel="stylesheet" href="css/sales-offer.css"/>
+<link rel="stylesheet" href="css/sale-banner.css"/>
+<link rel="stylesheet" href="css/service.css"/>
+</head>
+<body>
+
+<!-- <nav>  -->
+        
+ <!--menu-bar----------------------------------------->
+ <div class="navigation fix-nav">
+     <!--logo------------>
+     <a href="#" class="logo"><img alt="" src="images/logo.png" alt=""/></a>
+     <!--menu-icon------------->
+     <div class="toggle"></div>
+     <!--menu----------------->
+     <ul class="menu"></ul>
+         <li><a href="index.html">HOME</a></li>
+		 </li><div class="dropdown">
+		 <button class="dropbtn">ARTISTS</button>
+		 <div class="dropdown-content">
+			<a href="leo.html">Da Vinci</a>
+			<a href="vincent.html">Vincent</a>
+			<a href="picasso.html">Picasso</a>
+		 </div>
+		 </div>
+         </li>
+         <li><a href="genre.html">GENRE</a></li>
+         <li><a href="aboutus.html">ABOUT-US</a></li>
+         <li><a href="home.html">LOGIN</a></li>
+         <li><a href="signin.html">SIGN IN </a></li>
+	
+		
+		<form id="reg-form" action="/action_page.php" style="border:1px solid #ccc">
+			<div class="container">
+			
+			  <h1>Sign Up</h1>
+			  
+			  <hr>
+			  
+			  <label class="required" for="name"><b>Name</b></label>
+			  <input type="text" id="username" placeholder="Enter Name" name="name" required><br>
+			  
+			  <label class="required" for="Age"><b>Age</b></label>
+			  <input type="text" id="age" placeholder="Enter Age" name="Age" required><br>
+			  
+			  <label for="about"><b>About</b></label>
+			  <input type="text" id="about" placeholder="Enter Course" name="about"><br>
+			  
+			  <label class="required" for="email"><b>Email</b></label>
+			  <input type="text" id="email" placeholder="Enter Email" name="email" required><br>
+		  
+			  <label class="required" for="psw"><b>Password</b></label>
+			  <input type="password" id="password" placeholder="Enter Password" name="psw" required><br>
+		
+			  
+			  <label>
+				<input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+			  </label><br>
+			  
+			  <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+		  
+			  <div class="clearfix">
+				<button style="margin:20px" type="button" class="cancelbtn">Cancel</button>
+				<button style="margin:20px" type="submit" class="signupbtn">Sign Up</button>
+			  </div>
+			</div>
+		  </form>
+
+		<script>
+			const form = document.getElementById('reg-form')
+			form.addEventListener('submit', registerUser)
+
+			async function registerUser(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const age = document.getElementById('age').value
+				const about = document.getElementById('about').value
+				const email = document.getElementById('email').value
+				const password = document.getElementById('password').value
+				const result = await fetch('/api/register', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						age,
+						about,
+						email,
+						password,
+
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everything went fine
+					alert('Success')
+					location.href = "/index.html"
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+	</body>
+</html>

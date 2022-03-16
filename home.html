@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<style>
+
+		.login {
+				position:absolute ;
+				background-image:url("images/image1.jpg");
+  				width: 600px;
+				height: 500px;
+				top:150px;
+				border-width: 50px;
+  				border-color: black;
+  				padding: 100px;
+  				margin: 10px;
+				left: 25%;
+		}
+	
+		body{
+			text-align: center;
+		}
+
+		form{	
+			display: inline-block;
+		}
+
+		
+		</style>
+	</head>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/lightslider.css"/>
+	<link rel="stylesheet" href="css/lightslider-custom.css"/>
+	<link rel="stylesheet" href="css/feature.css"/>
+	<link rel="stylesheet" href="css/new-product.css"/>
+	<link rel="stylesheet" href="css/sales-offer.css"/>
+	<link rel="stylesheet" href="css/sale-banner.css"/>
+	<link rel="stylesheet" href="css/service.css"/>
+	</head>
+	<body>
+
+
+        
+ <!--menu-bar----------------------------------------->
+ <div class="navigation fix-nav">
+     <!--logo------------>
+     <a href="" class="logo"><img alt="" src="images/logo.png" alt=""/></a>
+     <!--menu-icon------------->
+     <div class="toggle"></div>
+     <!--menu----------------->
+     <ul class="menu"></ul>
+         <li><a href="index.html">HOME</a></li>
+		 </li><div class="dropdown">
+		 <button class="dropbtn">ARTISTS</button>
+		 <div class="dropdown-content">
+			<a href="leo.html">Da Vinci</a>
+			<a href="vincent.html">Vincent</a>
+			<a href="picasso.html">Picasso</a>
+		 </div>
+		 </div>
+         </li>
+         <li><a href="genre.html">GENRE</a></li>
+         <li><a href="aboutus.html">ABOUT-US</a></li>
+         <li><a href="home.html">LOGIN</a></li>
+         <li><a href="signin.html">SIGN IN </a></li>
+     
+	
+		<div class="login">
+			<h1 >Login</h1>
+		<form id="login">
+			<input type="text" autocomplete="off" id="username" placeholder="Username" /></br></br>
+			<input type="password" autocomplete="off" id="password" placeholder="Password" /></br></br>
+			<input type="submit" value="Submit Form" />
+		</form>
+		</div>
+
+		<script>
+			const form = document.getElementById('login')
+			form.addEventListener('submit', login)
+
+			async function login(event) {
+				event.preventDefault()
+				const username = document.getElementById('username').value
+				const password = document.getElementById('password').value
+
+				const result = await fetch('/api/login', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+						username,
+						password
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					console.log('Got the token: ', result.data)
+					localStorage.setItem('token', result.data)
+					alert('Success')
+					location.href="./index.html"
+				} else {
+					alert(result.error)
+				}
+			}
+		</script>
+	</body>
+</html>

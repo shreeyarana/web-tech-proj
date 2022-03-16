@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js">
+    </script>
+    <title>About Us</title>
+    
+     <!--using FontAwesome--------------->
+     <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+      
+        <!--style----->
+        <style>
+            .inf{
+                position:absolute;
+                top:70px;
+                right: 250px;
+                font-size:25px;
+            }
+            
+        </style>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/lightslider.css"/>
+    <link rel="stylesheet" href="css/lightslider-custom.css"/>
+    <link rel="stylesheet" href="css/feature.css"/>
+    <link rel="stylesheet" href="css/new-product.css"/>
+    <link rel="stylesheet" href="css/sales-offer.css"/>
+    <link rel="stylesheet" href="css/sale-banner.css"/>
+    <link rel="stylesheet" href="css/service.css"/>
+    </head>
+    <body>
+    
+    
+    
+     <!--menu-bar----------------------------------------->
+     <div class="navigation fix-nav">
+         <!--logo------------>
+         <a href="#" class="logo"><img alt="" src="images/logo.png" alt=""/></a>
+         <!--menu-icon------------->
+         <div class="toggle"></div>
+         <!--menu----------------->
+         <ul class="menu"></ul>
+         <li><a href="index.html">HOME</a></li>
+		 </li><div class="dropdown">
+		 <button class="dropbtn">ARTISTS</button>
+		 <div class="dropdown-content">
+			<a href="leo.html">Da Vinci</a>
+			<a href="vincent.html">Vincent</a>
+			<a href="picasso.html">Picasso</a>
+		 </div>
+		 </div>
+         </li>
+         <li><a href="genre.html">GENRE</a></li>
+         <li><a href="aboutus.html">ABOUT-US</a></li>
+         <li><a href="home.html">LOGIN</a></li>
+         <li><a href="signin.html">SIGN IN </a></li>
+         <!--right-menu----------->
+         <div class="right-menu">
+           
+            <div id="wrap">
+            <input id="search" name="search" type="text" placeholder="What're we looking for ?"/>
+    </head>
+    <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+function Name(props) {
+  return <p>NAME :{props.name}</p>;
+}
+function Srn(props) {
+  return <p>SRN :{props.srn}</p>;
+}
+function Mail(props) {
+  return <p>MAIL :{props.mail}</p>;
+}
+
+function App() {
+  return (
+    <div class="inf">
+      <img src = "images/gal.jpg" height="200px" width="600px" top="20px"/>
+   
+      <p>Le Celebre is an French originated art-gallery which is known for presenting the most 
+        exquisite artworks for our customers.
+        The artworks are brought to our customers from one of the best artists and are 
+        meant to serve their artistic requirements.
+        
+        Le Celebre is known to keep up the trust of our customers for years unwaveringly.
+        Our website also serves as a mode of information about the paintings.
+        It  supports new talented artists by providing information 
+        and platform to showcase their artwork.</p>
+        <br/>
+        <br/>
+
+        Details of Le Celebre Team
+
+      <Name name=" Sarveksha Y R" />
+      <Srn srn=" PES1UG20CS685"/>
+      <Mail mail=" yrsarveksha@gmail.com"/>
+      <Name name=" Sahana S" />
+      <Srn srn=" PES1UG20CS723"/>
+      <Mail mail=" sahanshankar@gmail.com"/>
+      <Name name=" Shreeya Rana" />
+      <Srn srn=" PES1UG20CS725"/>
+      <Mail mail=" shreeyarana@gmail.com"/>
+   </div>
+  );
+}
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
+
+
+</script>
+
+</body>
+</html>

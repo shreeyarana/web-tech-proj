@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="IE-edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, intial-scale=1.0" name="viewport">
+<title>Artists</title>
+<!--fav-icon---------------->
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+ 
+ <script crossorigin="anonymous" src="https://kit.fontawesome.com/c8e4d183c2.js"></script>
+  
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/lightslider.css"/>
+<link rel="stylesheet" href="css/lightslider-custom.css"/>
+<link rel="stylesheet" href="css/feature.css"/>
+<link rel="stylesheet" href="css/new-product.css"/>
+<link rel="stylesheet" href="css/sales-offer.css"/>
+<link rel="stylesheet" href="css/sale-banner.css"/>
+<link rel="stylesheet" href="css/service.css"/>
+<link rel="stylesheet" href="css/styleslide.css"/>
+</head>
+<body>
+
+      
+ <!--menu-bar----------------------------------------->
+ <div class="navigation fix-nav">
+     <!--logo------------>
+     <a href="" class="logo"><img alt="" src="images/logo.png" alt=""/></a>
+     <!--menu-icon------------->
+     <div class="toggle"></div>
+     <!--menu----------------->
+     <ul class="menu"></ul>
+         <li><a href="index.html">HOME</a></li>
+		 </li><div class="dropdown">
+		 <button class="dropbtn">ARTISTS</button>
+		 <div class="dropdown-content">
+			<a href="leo.html">Da Vinci</a>
+			<a href="vincent.html">Vincent</a>
+			<a href="picasso.html">Picasso</a>
+		 </div>
+		 </div>
+         </li>
+         <li><a href="genre.html">GENRE</a></li>
+         <li><a href="aboutus.html">ABOUT-US</a></li>
+         <li><a href="home.html">LOGIN</a></li>
+         <li><a href="signin.html">SIGN IN </a></li>
+     <!--right-menu----------->
+     <div class="right-menu">
+       
+      <div id="wrap">
+        
+   
+     </div>
+     </div>
+<!-- </nav> -->
+            <h1 class="center">Pablo Picasso</h1>
+			<img src="images/pablo picasso.png" width = "500px" height="500px" class="center"/>
+			<div class ="a">
+              <p>Family of Saltimbanques (French: Famille de saltimbanques) is a 1905 oil on canvas painting by Pablo Picasso. The work depicts six saltimbanques, 
+                a kind of itinerant circus performer, in a desolate landscape. </p>
+        <p>It is considered the masterpiece of Picasso's Rose Period, sometimes called his circus period. The painting is housed in the collection of the
+              National Gallery of Art in Washington, D.C.</p>
+        <p>This painting was created during Picasso's early years as an artist after moving to Paris from Barcelona in 1904. As a young man with little money,
+              Picasso lived in a studio in a dilapidated building known as the Bateau-Lavoir. He was fortunate to be surrounded by the many young artists who lived
+                in the building and local area, but for Picasso, this was a period of loneliness and poverty. His sympathy for lonely, poor and isolated people is 
+                most evident in the melancholy paintings of his Blue Period, which continued until 1904</p>
+        <p>By 1905, Picasso shifted his outlook and began to paint in a new palette of warmer shades, depicting subjects with a more positive undertone.
+              In this Rose Period, Picasso developed an interest in the life of the saltimbanque, or travelling circus performer, often depicting groups or families of acrobats</p>
+        </div>
+			
+			<div class="slideshow-container">
+			
+<div class="mySlides fade">
+  <div class="numbertext">1/ 6</div>
+  <img src="images/pablo picasso.png" style="width:300px">
+  <div class="text">PABLO PICASSO</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 6</div>
+  <img src="images/girl before mirror.png" style="width:300px">
+  <div class="text">GIRL BEFORE A MIRROR</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 6</div>
+  <img src="images/the weeping woman.png" style="width:300px">
+  <div class="text">THE WEEPING WOMAN</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 6</div>
+  <img src="images/retrato de Daniel-Henry Kahnweiler.png" style="width:300px">
+  <div class="text">RETRATO DE DANIEL-HENRY KAHNWEILER </div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 6</div>
+  <img src="images/guernica.png" style="width:500px">
+  <div class="text">GUERNICA</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">6 / 6</div>
+  <img src="images/family of saltimbanques.png" style="width:400px">
+  <div class="text">FAMILY OF SALTIMBANQUES</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>  
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+	</body>
+
+</html>
